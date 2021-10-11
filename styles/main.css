@@ -340,7 +340,7 @@ footer .box-container .box .links a {
 
     .topnav a, header #links a {
         color: #ffffff;
-        padding: 14px 16px;
+        padding: 1.2rem 1.3rem;
         text-decoration: none;
         display: block;
     }
@@ -374,14 +374,14 @@ footer .box-container .box .links a {
         flex-direction: row;
         justify-content:space-between;
         width: 100vw;
-        padding: 10px;
+        padding: 1rem;
         overflow: hidden;
         background-color: #4D5359;
     }
 
     .topnav a, header #links a {
         color: #ffffff;
-        padding: 14px 16px;
+        padding: 1.2rem 1.3rem;
         text-decoration: none;
         display: block;
     }
@@ -398,7 +398,7 @@ footer .box-container .box .links a {
     header #links {
         display: none;
         font-size: 1.2rem;
-        padding: 10rem;
+        padding: 1rem;
         overflow: hidden;
         background-color: #4D5359;
     }
