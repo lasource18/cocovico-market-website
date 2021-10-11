@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/3ccfb19f85.js" crossorigin="anonymous"></script>
+    <title>Cocovico Market | Login Page</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+
+        <div class="topnav">
+            <a href="javascript:void(0);" id="hamburger-menu" class="icon" onclick="mobileMenuFunc()">
+                <i class="fa fa-bars icon" id="menu-bar"></i>
+            </a>
+            <a href="index.php" class="logo">Cocovico &nbsp;<i class="fas fa-shopping-basket"></i>&nbsp; Market</a>
+            <a href="cart.php">
+                <i class="fas fa-shopping-cart icon"></i>
+            </a>
+        </div>
+
+        <nav id="links">
+            <a href="index.php">Home</a>
+            <a href="index.php#aisles">Aisles</a>
+            <a href="#login">Login</a>
+            <a href="signup.php">Sign Up</a>
+        </nav>
+
+    </header>
+    <!-- / Header -->
+
+    <!-- Main -->
+    <main class="login-form" id="login">
+
+        <h1 class="heading">Login</h1>
+
+        <form action="">
+
+            <div class="inputBox">
+                <label for="">email</label>
+                <input type="email" placeholder="email" name="email" id="email" required>
+                <label for="">password</label>
+                <input type="password" placeholder="password" name="password" id="password" required>
+            </div>
+
+            <div class="form-submit">
+                <input type="submit" name="submit" value="login" class="btn">
+            </div>
+        </form>
+
+    </main>
+    <!-- / Main -->
+
+    <section class="newsletter">
+
+        <h3>subscribe to get the latest updates</h3>
+
+        <form action="">
+            <input class="box" type="email" placeholder="enter your email">
+            <input type="submit" value="subscribe" class="btn">
+        </form>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="box-container">
+
+            <div class="box">
+                <a href="index.php" class="logo">Cocovico &nbsp;<i class="fas fa-shopping-basket"></i>&nbsp; Market</a>
+                <p>Cocovico is a Canadian grocery store chain bringing fresh locally grown products to its customers accross the world. Eat fresh!</p>
+                <div class="share">
+                    <a href="#" class="btn fab fa-facebook-f"></a>
+                    <a href="#" class="btn fab fa-twitter"></a>
+                    <a href="#" class="btn fab fa-instagram"></a>
+                    <a href="#" class="btn fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>our locations</h3>
+                <div class="links">
+                    <a href="#">Canada</a>
+                    <a href="#">USA</a>
+                    <a href="#">france</a>
+                    <a href="#">japan</a>
+                    <a href="#">Côte d'Ivoire</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <div class="links">
+                    <a href="index.php">home</a>
+                    <a href="aisles.php">aisles</a>
+                    <a href="index.php#products">products</a>
+                    <a href="index.php#contact">contact</a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+    <!-- / Footer -->
+
+<script>
+    // Mobile menu
+    function mobileMenuFunc() {
+        
+        let menu = document.getElementById("hamburger-menu");            
+        let x = document.getElementById("links");
+
+        if (x.style.display === "flex") {
+            x.style.display = "none";
+            menu.style.color = '#ffffff';
+            menu.style.backgroundColor = '#4D5359';
+        } else {
+            x.style.display = "flex";
+            x.style.flexDirection = "column";
+            menu.style.color = '#000000';
+            menu.style.backgroundColor = '#ddd';
+        }
+        
+    }
+</script>
+</body>
+</html>
