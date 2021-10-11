@@ -90,19 +90,6 @@ body {
     text-transform: uppercase;
 }
 
-.category .box-container {
-    padding: 2rem;
-    gap: 1.5rem;
-}
-
-.category .box-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
 .category .box-container .box {
     display: flex;
     flex-direction: column;
@@ -121,7 +108,7 @@ body {
     width: 100%;
 }
 
-.products .box-container {
+.products .box-container, .category .box-container {
     display: flex;
     flex-wrap: wrap;
     padding: 2rem;
@@ -353,7 +340,7 @@ footer .box-container .box .links a {
 
     .topnav a, header #links a {
         color: #ffffff;
-        padding: 1.2rem 1.3rem;
+        padding: 14px 16px;
         text-decoration: none;
         display: block;
     }
@@ -394,7 +381,7 @@ footer .box-container .box .links a {
 
     .topnav a, header #links a {
         color: #ffffff;
-        padding: 1.2rem 1.3rem;
+        padding: 14px 16px;
         text-decoration: none;
         display: block;
     }
