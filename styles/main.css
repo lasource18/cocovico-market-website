@@ -172,7 +172,7 @@ body {
 }
 
 .newsletter {
-    background: url(../images-mock/newsletter-bg.jpg) no-repeat;
+    background: url(../images/newsletter-bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -297,7 +297,6 @@ footer .box-container .box .links a {
         padding: 1rem;
         overflow: hidden;
         background-color: #4D5359;
-        /* position: relative; */
     }
 
     .topnav a, header #links a {
@@ -350,7 +349,6 @@ footer .box-container .box .links a {
         padding: 1rem;
         overflow: hidden;
         background-color: #4D5359;
-        /* position: relative; */
     }
 
     .topnav a, header #links a {
@@ -392,7 +390,6 @@ footer .box-container .box .links a {
         padding: 10px;
         overflow: hidden;
         background-color: #4D5359;
-        /* position: relative; */
     }
 
     .topnav a, header #links a {
