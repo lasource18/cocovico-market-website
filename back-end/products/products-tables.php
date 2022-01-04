@@ -22,6 +22,9 @@
                     <a class="nav-link active" aria-current="page" href="../index.html#home">Home</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../users/users-table.php">Users</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#products-table">Tables Index</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -52,27 +55,31 @@
 
     <div class="container">
         <table class="table table-striped table-borederred">
-            <tr class="text-center">
-                <th>Tables</th>
-            </tr>
-            <tr>
-                <td><a href="./beverages-table.php">Beverages</a></td>
-            </tr>
-            <tr>
-                <td><a href="./dairy-table.php">Dairy</a></td>
-            </tr>
-            <tr>
-                <td><a href="./fruits-table.php">Fruits</a></td>
-            </tr>
-            <tr>
-                <td><a href="./meat-table.php">Meat</a></td>
-            </tr>
-            <tr>
-                <td><a href="./seafood-table.php">Seafood</a></td>
-            </tr>
-            <tr>
-                <td><a href="./vegetables-table.php">Vegetables</a></td>
-            </tr>
+            <thead>
+                <tr class="text-center">
+                    <th>Tables</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="./beverages-table.php">Beverages</a></td>
+                </tr>
+                <tr>
+                    <td><a href="./dairy-table.php">Dairy</a></td>
+                </tr>
+                <tr>
+                    <td><a href="./fruits-table.php">Fruits</a></td>
+                </tr>
+                <tr>
+                    <td><a href="./meat-table.php">Meat</a></td>
+                </tr>
+                <tr>
+                    <td><a href="./seafood-table.php">Seafood</a></td>
+                </tr>
+                <tr>
+                    <td><a href="./vegetables-table.php">Vegetables</a></td>
+                </tr>
+            </tbody>
         </table>
     </div>
 </body>

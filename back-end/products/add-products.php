@@ -12,10 +12,10 @@
             $image = $_POST['pimage'];
         }
 
-        $sql = "INSERT INTO `$category`(`category`, `name`, `quantity`, `price`, `image`) VALUES ('$category', '$name', '$quantity', '$price', 'image')";
+        $sql = "INSERT INTO `$category`(`category`, `name`, `quantity`, `price`, `image`) VALUES ('$category', '$name', '$quantity', '$price', '$image')";
 
         if ($con->query($sql) === TRUE) {
-            header("Location: ./add-products.php");
+            header("Location: ./" . $category . "-table.php");
         } else {
             echo "Something went wrong";
         }
@@ -36,12 +36,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3ccfb19f85.js" crossorigin="anonymous"></script>
     <title>Add Product</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#home">Cocovico Market</a>
+            <a class="navbar-brand" href="#home">Cocovico&nbsp;<i class="fas fa-shopping-basket"></i>&nbsp;Market
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -51,7 +53,10 @@
                     <a class="nav-link active" aria-current="page" href="../index.html#home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../index.html#home">Tables Index</a>
+                    <a class="nav-link active" aria-current="page" href="../users/users-table.php">Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../products/products-tables.php">Tables Index</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -93,7 +98,7 @@
                         <input type="text" class="form-control" name="pname" id="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="name">Quantity</label>
+                        <label for="quantity">Quantity</label>
                         <input type="number" min="0" max="99999" value="100" class="form-control" name="pquantity" id="quantity" required>
                     </div>
                     <div class="form-group">

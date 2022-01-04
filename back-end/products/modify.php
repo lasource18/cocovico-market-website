@@ -16,7 +16,6 @@
             `price`='$price',
             `image`='$image' 
             WHERE id = $id";
-        echo $sql;
 
         if ($con->query($sql) === TRUE) {
             header("Location: ./" . $category . "-table.php");

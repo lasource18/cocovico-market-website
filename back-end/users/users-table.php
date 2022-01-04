@@ -1,7 +1,7 @@
 <?php
-    require_once('products-db.php');
+    require_once('users-db.php');
 
-    $sql = "SELECT * FROM `meat`";
+    $sql = "SELECT * FROM `users`";
     $result = $con->query($sql);
 ?>
 <!DOCTYPE html>
@@ -13,10 +13,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/3ccfb19f85.js" crossorigin="anonymous"></script>
-    <title>Meat Table</title>
+    <title>Users Table</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#home">Cocovico&nbsp;<i class="fas fa-shopping-basket"></i>&nbsp;Market
             </a>
@@ -29,7 +29,7 @@
                     <a class="nav-link active" aria-current="page" href="../index.html#home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../users/users-table.php">Users</a>
+                    <a class="nav-link active" aria-current="page" href="#users">Users</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="../products/products-tables.php">Tables Index</a>
@@ -39,12 +39,12 @@
                         Tables
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="./beverages-table.php">Beverages</a></li>
-                        <li><a class="dropdown-item" href="./dairy-table.php">Dairy</a></li>
-                        <li><a class="dropdown-item" href="./fruits-table.php">Fruits</a></li>
-                        <li><a class="dropdown-item" href="#meat">Meat</a></li>
-                        <li><a class="dropdown-item" href="./seafood-table.php">Seafood</a></li>
-                        <li><a class="dropdown-item" href="./vegetables-table.php">Vegetables</a></li>
+                        <li><a class="dropdown-item" href="../products/beverages-table.php">Beverages</a></li>
+                        <li><a class="dropdown-item" href="../products/dairy-table.php">Dairy</a></li>
+                        <li><a class="dropdown-item" href="../products/fruits-table.php">Fruits</a></li>
+                        <li><a class="dropdown-item" href="../products/meat-table.php">Meat</a></li>
+                        <li><a class="dropdown-item" href="../products/seafood-table.php">Seafood</a></li>
+                        <li><a class="dropdown-item" href="../products/vegetables-table.php">Vegetables</a></li>
                     </ul>
                 </li>
             </ul>
@@ -56,21 +56,17 @@
         </div>
     </nav>
     <br>
-    <div class="jumbotron" id="meat">
-        <a href="meat" style="text-decoration: none; color: black;"><h1 class="text-center" id="show">Cocovico&nbsp;<i class="fas fa-shopping-basket"></i>&nbsp;Market</h1></a>
+    <div class="jumbotron" id="users">
+        <a href="#users" style="text-decoration: none; color: black;"><h1 class="text-center" id="show">Cocovico&nbsp;<i class="fas fa-shopping-basket"></i>&nbsp;Market</h1></a>
     </div>
 
-    <div class="table-responsive">
+    <div class="table-responsive" id="users">
         <table class="table table-striped table-borederred">
             <thead>
                 <tr class="text-center">
-                    <th>PID</th>
-                    <th>Category</th>
-                    <th>Name</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                    <th>Image URL</th>
-                    <th>Actions</th>
+                    <th>UID</th>
+                    <th>Email</th>
+                    <th>Password</th>
                 </tr>
             </thead>
             <tbody>
@@ -79,11 +75,8 @@
                         while ($row = $result->fetch_assoc()) {
                             echo "<tr class='text-center'>";
                             echo "<td>" . $row['id'] . "</td>";
-                            echo "<td>" . $row['category'] . "</td>";
-                            echo "<td>" . $row['name'] . "</td>";
-                            echo "<td>" . $row['quantity'] . "</td>";
-                            echo "<td>" . $row['price'] . "</td>";
-                            echo "<td>" . $row['image'] . "</td>";
+                            echo "<td>" . $row['email'] . "</td>";
+                            echo "<td>" . $row['password'] . "</td>";
                             echo "<td>";
                             echo "<div class='btn-group'>";
                             echo "<a href='./edit-products.php?id=" . $row['id'] . "&category=" . $row['category'] . "' class='btn btn-secondary'>Edit</a>";
@@ -99,7 +92,7 @@
         </table>
     </div>
     <div class="text-center">
-        <a href='./add-products.php' class='btn btn-dark btn-block'>Add</a>
+        <a href='./add-users.php' class='btn btn-dark btn-block'>Add</a>
     </div>
 </body>
 </html>
